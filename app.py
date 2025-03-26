@@ -1,7 +1,10 @@
 import sqlite3
 from flask import Flask, request, jsonify
-
+from flask_cors import CORS
+# Criamos a aplicação Flask
+# "__name__" indica que este é o arquivo principal do nosso programa
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/pagar")
